@@ -1,0 +1,78 @@
+---
+layout: default
+title: "Wish → Plan Generator: Turn Any Goal into 11 Dated Steps | 111197"
+description: "Free Wish → Plan generator. Enter a goal, amount and deadline to get a dated 11-step savings plan with monthly, weekly and daily amounts, milestones and a realism check."
+---
+
+<section class="page-hero"><div class="wrap">
+<div class="crumbs"><a href="/index.html">Home</a> / Wish → Plan</div>
+<span class="eyebrow">Wish → Plan generator</span>
+<h1>Give your wish a number, a date and 11 steps</h1>
+<p class="lead">Fill in five fields. You’ll get a dated plan, the exact amount to save per month, week and day, milestone dates, and an honest realism check against your income. Nothing leaves your browser unless you ask us to email it.</p>
+</div></section>
+
+<section style="padding-top:10px" id="plan"><div class="wrap grid g2" style="align-items:start">
+<form class="form-card" id="planForm">
+<div class="field"><label for="p-wish">Your wish, in one sentence</label><input id="p-wish" required maxlength="120" placeholder="e.g. Build a $5,000 emergency fund"></div>
+<div class="row">
+<div class="field"><label for="p-cat">Category</label><select id="p-cat"><option>Safety net</option><option>Pay off debt</option><option>Travel</option><option>Car</option><option>Home / moving out</option><option>Education / courses</option><option>Start a business</option><option>Wedding / event</option><option>Investing</option><option>Giving</option><option>Something else</option></select></div>
+<div class="field"><label for="p-cur">Currency</label><select id="p-cur" data-cur><option value="$">$ Dollar</option><option value="€">€ Euro</option><option value="£">£ Pound</option><option value="₹">₹ Rupee</option><option value="₱">₱ Peso</option><option value="R">R Rand</option></select></div>
+</div>
+<div class="row">
+<div class="field"><label for="p-amount">Target amount</label><input id="p-amount" type="number" min="1" step="1" required placeholder="5000"></div>
+<div class="field"><label for="p-have">Already saved</label><input id="p-have" type="number" min="0" step="1" value="0"></div>
+</div>
+<div class="row">
+<div class="field"><label for="p-date">Deadline</label><input id="p-date" type="date" required></div>
+<div class="field"><label for="p-income">Monthly take-home pay <small style="color:var(--mute)">(optional)</small></label><input id="p-income" type="number" min="0" step="1" placeholder="2800"></div>
+</div>
+<button class="btn btn-gold btn-block" type="submit">Generate my 11-step plan</button>
+<p class="notice">Educational tool. Results are estimates and don’t include interest earned or fees.</p>
+</form>
+
+<div>
+<div class="plan" id="planOut" aria-live="polite">
+<div class="card" style="margin-bottom:16px">
+<span class="tag gold">Your plan</span>
+<h2 id="planTitle" style="margin:10px 0 6px;font-size:1.6rem">—</h2>
+<div class="kv">
+<div><small>Save per month</small><b id="planPerM">—</b></div>
+<div><small>Months to go</small><b id="planMonths">—</b></div>
+<div><small>Share of income</small><b id="planShare">—</b></div>
+</div>
+<p id="planVerdict" style="margin-top:12px"></p>
+<div class="pill-row no-print" style="margin-top:12px"><button class="btn btn-ghost btn-sm" type="button" id="planPrint">Print / save PDF</button><button class="btn btn-ghost btn-sm" type="button" id="planCopy">Copy plan</button></div>
+</div>
+<ol id="planList"></ol>
+<form class="js-form form-card no-print" data-subject="Plan emailed — Wish→Plan" data-ok="Sent! Check your inbox in a few minutes (and your promotions tab)." style="margin-top:18px">
+<h3>Email me this plan + the 11th Review reminder</h3>
+<p style="color:var(--ink2);font-size:.92rem">We’ll send your plan and a short reminder on the 11th of each month. Unsubscribe anytime.</p>
+<input type="hidden" name="plan" id="planText">
+<div class="row"><div class="field"><label for="pe-name">First name</label><input id="pe-name" name="name" required autocomplete="given-name"></div><div class="field"><label for="pe-email">Email</label><input id="pe-email" name="email" type="email" required autocomplete="email"></div></div>
+<input class="hp" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+<div class="field"><label class="check"><input type="checkbox" name="coach_intro" value="Yes — introduce me to a vetted coach"> <span>Also introduce me to a vetted money or career coach for this goal (free intro call).</span></label></div>
+<div class="field"><label class="check"><input type="checkbox" name="consent" value="yes" required> <span>I agree to receive my plan and reminders and accept the <a href="/privacy.html">Privacy Policy</a>.</span></label></div>
+<button class="btn btn-gold btn-block" type="submit">Email my plan</button><div class="form-msg" role="status"></div>
+</form>
+</div>
+<div class="card" id="planEmpty">
+<h3>What you’ll get</h3>
+<ol class="steps11" style="grid-template-columns:1fr;margin-top:12px">
+<li><b>A dated checklist</b><span>Each of the 11 steps with a real date attached.</span></li>
+<li><b>Exact amounts</b><span>Per month, per week and per day.</span></li>
+<li><b>A realism check</b><span>How the plan compares to your take-home pay.</span></li>
+<li><b>Milestones</b><span>25%, 50% and 75% dates to celebrate on the way.</span></li>
+</ol>
+</div>
+</div>
+</div></section>
+
+<section class="section-alt"><div class="wrap article">
+<h2>How the generator decides your numbers</h2>
+<p>The plan divides the gap between your target and what you’ve already saved by the number of whole months until your deadline. Weekly and daily figures are the same amount expressed at a finer scale (×12÷52 and ×12÷365), which makes small goals feel achievable and big goals honest.</p>
+<p>The realism check compares the monthly amount with your take-home pay. Up to 10% is comfortable, 10–20% matches the savings share most budgeting frameworks recommend, 20–35% is a stretch that usually needs both a spending cut and an income boost, and anything above that is a sign to extend the deadline or lower the target. These are rules of thumb, not guarantees.</p>
+<h3>Why the starter cushion and the 11% debt rule come before the goal</h3>
+<p>Plans usually fail on a surprise expense, not on motivation. A small cushion — we suggest the lower of 10% of your goal or $1,111 — stops one car repair from wiping out months of progress. Likewise, debt charging more than about 11% a year is costing you more than most savings accounts or conservative investments earn, so paying it down in parallel is often the fastest way to “save.”</p>
+<div class="callout"><p><b>Tip:</b> put your plan’s monthly amount on an automatic transfer scheduled for payday. Then use the <a href="/tools.html#t-goal">Savings Goal calculator</a> if you want to include interest earned on the way.</p></div>
+</div></section>
+<script>document.addEventListener('DOMContentLoaded',function(){var o=document.getElementById('planOut'),e=document.getElementById('planEmpty');if(o&&e){new MutationObserver(function(){if(o.classList.contains('show'))e.style.display='none'}).observe(o,{attributes:true})}});</script>
