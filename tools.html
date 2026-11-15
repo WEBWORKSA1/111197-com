@@ -1,0 +1,90 @@
+---
+layout: default
+title: "Free Money Calculators: $11.11 a Day, Savings Goal, Debt Payoff, Budget | 111197"
+description: "Free, private calculators: $11.11-a-day compounding, savings goal, debt payoff, 50/30/20 budget, emergency fund, rent affordability, freedom number, side hustle hours and date & generation."
+---
+
+<section class="page-hero"><div class="wrap">
+<div class="crumbs"><a href="/index.html">Home</a> / Tools</div>
+<span class="eyebrow">Free tools</span><h1>Nine calculators. Zero sign-ups.</h1>
+<p class="lead">Everything updates as you type and runs entirely in your browser. Pick a currency once and every tool uses it.</p>
+<div class="row" style="max-width:340px;margin-top:14px"><label for="cur-pick" style="align-self:center;margin:0">Currency</label><select id="cur-pick" data-cur><option value="$">$ Dollar</option><option value="€">€ Euro</option><option value="£">£ Pound</option><option value="₹">₹ Rupee</option><option value="₱">₱ Peso</option><option value="R">R Rand</option></select></div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+<nav class="tool-nav" aria-label="Calculators"><a href="#t-1111">$11.11 a day</a><a href="#t-goal">Savings goal</a><a href="#t-debt">Debt payoff</a><a href="#t-budget">50/30/20 budget</a><a href="#t-efund">Emergency fund</a><a href="#t-rent">Rent affordability</a><a href="#t-fire">Freedom number</a><a href="#t-hustle">Side hustle hours</a><a href="#t-age">Date &amp; generation</a></nav>
+
+<div class="grid" style="gap:24px">
+
+<div class="tool" id="t-1111"><h3>⏱ What $11.11 a day becomes</h3><p style="color:var(--ink2)">A daily amount, invested monthly and compounded monthly. Change the numbers to test your own habit.</p>
+<div class="grid g2"><div>
+<div class="field"><label for="e-daily">Daily amount</label><input id="e-daily" type="number" min="0" step="0.01" value="11.11"></div>
+<div class="row"><div class="field"><label for="e-rate">Annual return %</label><input id="e-rate" type="number" step="0.1" value="7"></div><div class="field"><label for="e-years">Years</label><input id="e-years" type="number" min="1" max="60" value="30"></div></div>
+<p class="notice">Returns are not guaranteed. 7% is a long-run illustration, not a forecast.</p></div>
+<div class="out"><small style="color:var(--mute)">Future value</small><div class="big" id="e-total">—</div>
+<div class="kv"><div><small>Per month</small><b id="e-month">—</b></div><div><small>You put in</small><b id="e-put">—</b></div><div><small>Growth</small><b id="e-growth">—</b></div></div>
+<div class="chart" id="e-chart" aria-label="Growth by year chart"></div><div style="height:14px"></div></div></div></div>
+
+<div class="tool" id="t-goal"><h3>◎ Savings goal</h3><p style="color:var(--ink2)">The exact monthly deposit needed to reach a target by a deadline, including interest.</p>
+<div class="grid g2"><div>
+<div class="row"><div class="field"><label for="g-target">Target</label><input id="g-target" type="number" value="5000"></div><div class="field"><label for="g-have">Saved now</label><input id="g-have" type="number" value="500"></div></div>
+<div class="row"><div class="field"><label for="g-months">Months</label><input id="g-months" type="number" min="1" value="11"></div><div class="field"><label for="g-rate">Savings rate % / yr</label><input id="g-rate" type="number" step="0.1" value="4"></div></div></div>
+<div class="out"><small style="color:var(--mute)">Deposit per month</small><div class="big" id="g-pmt">—</div>
+<div class="kv"><div><small>Per week</small><b id="g-week">—</b></div><div><small>Per day</small><b id="g-day">—</b></div><div><small>Interest helps</small><b id="g-int">—</b></div></div>
+<div class="bar"><i id="g-bar"></i></div><small style="color:var(--mute)" id="g-pct"></small></div></div></div>
+
+<div class="tool" id="t-debt"><h3>⛓ Debt payoff</h3><p style="color:var(--ink2)">How long a balance takes to clear, total interest, and what an extra payment saves.</p>
+<div class="grid g2"><div>
+<div class="row"><div class="field"><label for="d-bal">Balance</label><input id="d-bal" type="number" value="4000"></div><div class="field"><label for="d-apr">APR %</label><input id="d-apr" type="number" step="0.1" value="22.9"></div></div>
+<div class="row"><div class="field"><label for="d-pay">Monthly payment</label><input id="d-pay" type="number" value="150"></div><div class="field"><label for="d-extra">Extra per month</label><input id="d-extra" type="number" value="50"></div></div>
+<p class="notice" id="d-min"></p></div>
+<div class="out"><div class="kv" style="margin-top:0"><div><small>Time (current)</small><b id="d-time">—</b></div><div><small>Interest (current)</small><b id="d-int">—</b></div><div><small>Time (with extra)</small><b id="d-time2">—</b></div><div><small>Interest (with extra)</small><b id="d-int2">—</b></div></div>
+<p style="margin-top:14px;font-weight:600;color:var(--mint)" id="d-save"></p></div></div></div>
+
+<div class="tool" id="t-budget"><h3>◔ 50/30/20 budget</h3><p style="color:var(--ink2)">Split take-home pay into needs, wants and savings. Adjust the percentages to fit your city.</p>
+<div class="grid g2"><div>
+<div class="field"><label for="b-inc">Monthly take-home pay</label><input id="b-inc" type="number" value="2800"></div>
+<div class="row" style="grid-template-columns:repeat(3,1fr)"><div class="field"><label for="b-needs">Needs %</label><input id="b-needs" type="number" value="50"></div><div class="field"><label for="b-wants">Wants %</label><input id="b-wants" type="number" value="30"></div><div class="field"><label for="b-save">Save %</label><input id="b-save" type="number" value="20"></div></div>
+<p class="notice" id="b-sum"></p></div>
+<div class="out"><div class="kv" style="margin-top:0"><div><small>Needs</small><b id="b-n">—</b></div><div><small>Wants</small><b id="b-w">—</b></div><div><small>Savings &amp; debt</small><b id="b-s">—</b></div></div><p style="margin-top:14px" id="b-1111"></p></div></div></div>
+
+<div class="tool" id="t-efund"><h3>☂ Emergency fund</h3><p style="color:var(--ink2)">Add up essential monthly costs, choose how many months to cover, and get an 11-month path.</p>
+<div class="grid g2"><div>
+<div class="row"><div class="field"><label for="f-rent">Rent / housing</label><input id="f-rent" type="number" value="1200"></div><div class="field"><label for="f-food">Groceries</label><input id="f-food" type="number" value="350"></div></div>
+<div class="row"><div class="field"><label for="f-trans">Transport</label><input id="f-trans" type="number" value="180"></div><div class="field"><label for="f-debt">Minimum debt payments</label><input id="f-debt" type="number" value="150"></div></div>
+<div class="row"><div class="field"><label for="f-other">Phone, insurance, other</label><input id="f-other" type="number" value="200"></div><div class="field"><label for="f-months">Months to cover</label><input id="f-months" type="number" min="1" value="3"></div></div></div>
+<div class="out"><small style="color:var(--mute)">Full emergency fund</small><div class="big" id="f-total">—</div>
+<div class="kv"><div><small>Essentials / month</small><b id="f-month">—</b></div><div><small>Starter cushion</small><b id="f-starter">—</b></div><div><small>11-month path</small><b id="f-11">—</b></div></div></div></div></div>
+
+<div class="tool" id="t-rent"><h3>⌂ Rent affordability</h3><p style="color:var(--ink2)">Three common screening rules. The safest rent is the lowest of the three.</p>
+<div class="grid g2"><div>
+<div class="field"><label for="r-gross">Gross annual income</label><input id="r-gross" type="number" value="52000"></div>
+<div class="field"><label for="r-debt">Monthly debt payments</label><input id="r-debt" type="number" value="250"></div></div>
+<div class="out"><small style="color:var(--mute)">Comfortable rent</small><div class="big" id="r-safe">—</div>
+<div class="kv"><div><small>30% of gross</small><b id="r-30">—</b></div><div><small>40× rent rule</small><b id="r-40x">—</b></div><div><small>36% total-debt rule</small><b id="r-dti">—</b></div></div></div></div></div>
+
+<div class="tool" id="t-fire"><h3>◈ Freedom number</h3><p style="color:var(--ink2)">The portfolio that could cover your yearly spending at a chosen withdrawal rate, and how long it may take.</p>
+<div class="grid g2"><div>
+<div class="row"><div class="field"><label for="x-spend">Yearly spending</label><input id="x-spend" type="number" value="40000"></div><div class="field"><label for="x-wr">Withdrawal rate %</label><input id="x-wr" type="number" step="0.1" value="4"></div></div>
+<div class="row"><div class="field"><label for="x-have">Invested now</label><input id="x-have" type="number" value="5000"></div><div class="field"><label for="x-save">Invest per month</label><input id="x-save" type="number" value="600"></div></div>
+<div class="field"><label for="x-rate">Annual return %</label><input id="x-rate" type="number" step="0.1" value="6"></div></div>
+<div class="out"><small style="color:var(--mute)">Your freedom number</small><div class="big" id="x-target">—</div>
+<div class="kv"><div><small>Time to reach</small><b id="x-years">—</b></div><div><small>Around</small><b id="x-when">—</b></div></div>
+<p class="notice">Simplified model: ignores inflation, taxes and market swings.</p></div></div></div>
+
+<div class="tool" id="t-hustle"><h3>⚡ Side hustle hours</h3><p style="color:var(--ink2)">How many hours of extra work it takes to fund your monthly goal, after setting money aside for tax.</p>
+<div class="grid g2"><div>
+<div class="field"><label for="h-goal">Extra needed per month</label><input id="h-goal" type="number" value="400"></div>
+<div class="row"><div class="field"><label for="h-rate">Hourly rate</label><input id="h-rate" type="number" value="25"></div><div class="field"><label for="h-tax">Set aside for tax %</label><input id="h-tax" type="number" value="25"></div></div></div>
+<div class="out"><small style="color:var(--mute)">Hours needed</small><div class="big" id="h-hours">—</div>
+<div class="kv"><div><small>Per week</small><b id="h-week">—</b></div><div><small>Net hourly</small><b id="h-net">—</b></div></div></div></div></div>
+
+<div class="tool" id="t-age"><h3>✧ Date &amp; generation explorer</h3><p style="color:var(--ink2)">Pre-filled with 11 November 1997 (11/11/97). Enter any birth date.</p>
+<div class="grid g2"><div>
+<div class="field"><label for="a-date">Date of birth</label><input id="a-date" type="date"></div>
+<p class="notice">Your “date number” reduces the digits to a single figure (stopping at 11, 22 or 33) — a numerology tradition shown for fun, not as prediction.</p></div>
+<div class="out"><div class="kv" style="margin-top:0"><div><small>Age</small><b id="a-age">—</b></div><div><small>Days lived</small><b id="a-days">—</b></div><div><small>Born on a</small><b id="a-dow">—</b></div><div><small>Generation</small><b id="a-gen" style="font-size:.88rem">—</b></div><div><small>Next birthday in</small><b id="a-next">—</b></div><div><small>Next 11,111-day mark</small><b id="a-11111">—</b></div><div><small>Date number</small><b id="a-num">—</b></div></div></div></div></div>
+
+</div></div></section>
+
+<section class="section-alt"><div class="wrap"><div class="band"><div><h2 style="margin-bottom:6px">Numbers are step 2. Get all 11.</h2><p>Drop your goal into the Wish → Plan generator for a dated checklist — or ask for a free personal plan.</p></div><div style="display:grid;gap:10px"><a class="btn btn-gold btn-block" href="/planner.html">Wish → Plan</a><a class="btn btn-ghost btn-block" href="/get-plan.html">Free personal plan</a></div></div></div></section>
